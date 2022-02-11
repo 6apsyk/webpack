@@ -1,4 +1,4 @@
-import { DateTime } from "https://moment.github.io/luxon/es6/luxon.min.js";
+import { DateTime } from "luxon";
 
 const getDataDiff = (start, end) => {
   const v1 = DateTime.fromISO(start);
