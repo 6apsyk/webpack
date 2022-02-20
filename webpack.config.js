@@ -13,11 +13,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpeg|jpg|gif|mp3)$/i,
-        loader: "file-loader",
-        // options: {
-        //   name: "[path][name].[ext]",
-        // },
+        test: /\.(png|jpeg|jpg|gif|mp3|mp4)$/i,
+        loader: "img-optimize-loader",
+        options: {
+          compress: {
+            mode: "high",
+            webp: true,
+            gifsicle: true,
+            disableOnDevelopment: false,
+          },
+        },
       },
       {
         test: /\.css$/i,
